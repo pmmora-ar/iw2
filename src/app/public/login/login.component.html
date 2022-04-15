@@ -1,0 +1,37 @@
+<div>
+  <div>
+    <h3>Ingresa con tu cuenta preferida...</h3>
+    <!--<p>(si no te encuentras registrado te guiaremos)</p>-->
+  </div>
+  <!--
+<div>
+  <button class="button fancy-button" matTooltip="Ingresa con tu correo electrónico" disabled (click)="clickOnEmail()" class="button fancy-button">...tu correo<i class="material-icons">alternate_email</i>...</button>
+  <mat-form-field appearance="fill">
+    <mat-label>tu correo electrónico aquí</mat-label>
+    <input matInput></mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>tu clave de acceso aquí</mat-label>
+      <input matInput></mat-form-field>
+</div>
+-->
+  <!--
+<div class="button-row" *ngFor="let provider of enabledProviders | keyvalue">
+  {{providerSelector(provider)}}
+  <button class="button fancy-button" matTooltip="{{ provider.value.tip }}" aria-label=""
+        (click)="providerSelector(provider.value.name)">{{ provider.value.text }}
+      </button>
+</div>
+</div>
+-->
+  <div class="button-row" *ngFor="let provider of enabledProviders | keyvalue">
+    {{ providerSelector(provider) }}
+    <button
+      class="button fancy-button"
+      matTooltip="{{ provider.value.tip }}"
+      aria-label=""
+      (click)="providerSelector(provider.value.name)"
+    >
+      {{ provider.value.text }}
+    </button>
+  </div>
+</div>
